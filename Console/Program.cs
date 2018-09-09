@@ -9,27 +9,25 @@ namespace TestConsole
 {
     class Program
     {
-        private const string ApiKey = "7f881d0290f40204c3d53efbe2bc2a45-us18";
+        private static string _apiKey = string.Empty;
         private const string ListId = "e7f9c229b3";
 
         static void Main(string[] args)
         {
-            //const string email = "testedwadaw321@hotmail.com";
-
-            //var mergeVar = new MergeVar
-            //{
-            //    {"FNAME", "Kevin" },
-            //    {"LNAME", "Anders" }
-            //};
-
-            //var response = AddSubscriber(email, mergeVar);
-
-            //System.Console.WriteLine($"Add subscriber response: {response}.");
+            _apiKey = AskForApiKey();
 
             PromptActionMenu();
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadLine();
+        }
+
+        private static string AskForApiKey()
+        {
+            Console.WriteLine("Please enter your Mailchimp API key.");
+            var apiKey = Console.ReadLine();
+
+            return apiKey;
         }
 
         private static void PromptActionMenu()
@@ -96,7 +94,7 @@ namespace TestConsole
 
         private static IApiResponse<AddSubscriberResponse> AddSubscriber(string email, MergeVar mergeVar)
         {
-            var mailchimpManager = new MailchimpManager(ApiKey);
+            var mailchimpManager = new MailchimpManager(_apiKey);
 
             var response = mailchimpManager.ListAction(ListId).AddSubscriber(email, mergeVar);
 
