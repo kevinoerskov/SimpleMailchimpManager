@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMailchimpManager", "SimpleMailchimpManager\SimpleMailchimpManager.csproj", "{8106BA43-DC09-4C13-BDCE-8BD0A8F7B1FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "Console\TestConsole.csproj", "{FC3EDADC-1494-46F5-9C6F-72D894A5323E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{164389DE-5272-4E9D-A688-0DF058E47CC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{8106BA43-DC09-4C13-BDCE-8BD0A8F7B1FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8106BA43-DC09-4C13-BDCE-8BD0A8F7B1FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8106BA43-DC09-4C13-BDCE-8BD0A8F7B1FD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FC3EDADC-1494-46F5-9C6F-72D894A5323E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC3EDADC-1494-46F5-9C6F-72D894A5323E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC3EDADC-1494-46F5-9C6F-72D894A5323E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC3EDADC-1494-46F5-9C6F-72D894A5323E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{164389DE-5272-4E9D-A688-0DF058E47CC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{164389DE-5272-4E9D-A688-0DF058E47CC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{164389DE-5272-4E9D-A688-0DF058E47CC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{164389DE-5272-4E9D-A688-0DF058E47CC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

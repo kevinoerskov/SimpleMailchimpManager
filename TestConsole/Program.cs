@@ -1,4 +1,5 @@
-﻿using SimpleMailchimpManager;
+﻿using Newtonsoft.Json;
+using SimpleMailchimpManager;
 using SimpleMailchimpManager.Entities.Request;
 using SimpleMailchimpManager.Entities.Response;
 using SimpleMailchimpManager.Entities.Response.Subscriber;
@@ -89,7 +90,25 @@ namespace TestConsole
 
         private static void AddSubscriberAction()
         {
+            Console.Write("Please enter an e-mail address: ");
+            var email = Console.ReadLine();
+            Console.Write("Please enter first name: ");
+            var firstName = Console.ReadLine();
+            Console.Write("Please enter last name: ");
+            var lastName = Console.ReadLine();
 
+            var mergeVar = new MergeVar
+            {
+                {"FNAME", firstName },
+                {"LNAME", lastName }
+            };
+
+            var response = AddSubscriber(email, mergeVar);
+
+            if (response.Success == false)
+            {
+                Console.WriteLine(JsonConvert.SerializeObject(response.ErrorResponse));
+            }
         }
 
         private static IApiResponse<AddSubscriberResponse> AddSubscriber(string email, MergeVar mergeVar)
